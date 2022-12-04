@@ -18,14 +18,14 @@
   flex-wrap: nowrap;
   align-content: center;
   justify-content: center;
-  margin-left: 16px;
+  width: 16%;
 }
 .main .status span {
   font-size: 1rem;
   padding: 1px;
 }
 
-.title {
+.title h1 {
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
