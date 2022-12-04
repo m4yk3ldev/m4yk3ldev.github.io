@@ -11,6 +11,18 @@ const Home: FC = () => {
           <h1>Hola, soy Maykel Arias Torres</h1>
         </div>
         <p className={styles.description}>Soy Desarrollador FrontEnd </p>
+        <p>
+          Contáctame :{" "}
+          <a
+            type="email"
+            href="mailto:hanibal920915@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            className={styles.contact}
+          >
+            hanibal920915@gmail.com
+          </a>
+        </p>
       </main>
     </>
   );
