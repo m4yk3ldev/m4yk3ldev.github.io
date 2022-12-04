@@ -4,6 +4,9 @@ const Home: FC = () => {
   return (
     <>
       <main className={styles.main}>
+        <div className={styles.status}>
+          <span>En construccion</span>
+        </div>
         <h1 className={styles.title}>
           Hola, soy <span>Maykel Arias Torres</span>
         </h1>
