@@ -24,6 +24,7 @@ const Home: FC = () => {
           </a>
         </p>
       </main>
+      <footer className={styles.footer}></footer>
     </>
   );
 };
