@@ -19,7 +19,7 @@ const MainLayout: FC<Props> = ({title, children}) => {
             <Script src="https://app.embed.im/snow.js" defer></Script>
             <Script
         strategy={"afterInteractive"}
-        src={`https://www.googletagmanager.com/gtag/js?id=GTM-PJXWP2N`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-9DN35DFS38`}
       />
       <Script
         id={"gtag-id"}
@@ -29,6 +29,7 @@ const MainLayout: FC<Props> = ({title, children}) => {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
+          gtag('config', 'G-9DN35DFS38');
         `,
         }}
       ></Script>
