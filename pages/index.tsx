@@ -1,7 +1,8 @@
-import { NextPage } from "next";
 import Home from "../components/Home/Home";
 import MainLayout from "../components/Layout/MainLayout";
-const HomePage: NextPage = () => {
+import type { GetServerSideProps, InferGetServerSidePropsType, NextPage } from 'next'
+type GsspPageProps = InferGetServerSidePropsType<typeof getServerSideProps>
+const HomePage: NextPage = (props: GsspPageProps) => {
   return (
     <>
       <MainLayout title="Bienvenido">
@@ -10,4 +11,19 @@ const HomePage: NextPage = () => {
     </>
   );
 };
+type Props = {
+  locale?: string
+  locales?: string[]
+}
+export const getServerSideProps: GetServerSideProps<Props> = async ({
+  locale,
+  locales,
+}) => {
+  return {
+    props: {
+      locale,
+      locales,
+    },
+  }
+}
 export default HomePage;
