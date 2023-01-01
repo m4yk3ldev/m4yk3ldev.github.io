@@ -1,6 +1,6 @@
 import { NextPage } from "next";
-import Home from "../components/Home";
-import MainLayout from "../components/MainLayout";
+import Home from "../components/Home/Home";
+import MainLayout from "../components/Layout/MainLayout";
 const HomePage: NextPage = () => {
   return (
     <>
