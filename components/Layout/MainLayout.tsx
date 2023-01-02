@@ -11,7 +11,40 @@ const MainLayout: FC<Props> = ({ title, children }) => {
     <>
       <Head>
         <link rel="icon" type="image/x-icon" href={favicon.src} />
-        <link rel="shortcut icon" type="image/jpg" href={favicon.src}/>
+        <link rel="shortcut icon" type="image/jpg" href={favicon.src} />
+        <link rel="apple-touch-icon" href={favicon.src} />
+        <meta name="theme-color" content="#317EFB" />
+        <meta name="title" content="Hola, soy Maykel Arias Torres" />
+        <meta
+          name="description"
+          content="Soy un desarrollador web con experiencia en HTML, CSS, JavaScript, NodeJS y Python."
+        />
+        <meta
+          name="keywords"
+          content="portafolio, desarrollador web, HTML, CSS, JavaScript, frontend, front-end, python"
+        />
+        <meta name="author" content="Maykel Arias Torres" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://maykelarias.tech/" />
+        <meta property="og:title" content="Hola, soy Maykel Arias Torres" />
+        <meta
+          property="og:description"
+          content="Soy un desarrollador web con experiencia en HTML, CSS, JavaScript, NodeJS y Python."
+        />
+        <meta property="og:image" content={favicon.src} />
+
+        <meta property="twitter:card" content={favicon.src} />
+        <meta property="twitter:url" content="https://maykelarias.tech/" />
+        <meta
+          property="twitter:title"
+          content="Hola, soy Maykel Arias Torres"
+        />
+        <meta
+          property="twitter:description"
+          content="Soy un desarrollador web con experiencia en HTML, CSS, JavaScript, NodeJS y Python."
+        />
+        <meta property="twitter:image" content={favicon.src} />
         <title>{title}</title>
       </Head>
       <Script
