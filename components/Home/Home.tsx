@@ -3,13 +3,15 @@ import { useRouter } from "next/router";
 import { FC } from "react";
 import { GetLocaleStorage } from "../../lib/locale";
 import styles from "../../styles/Home.module.css";
-import FavIcon from "../FavIcon/FavIcon";
+import { MenuDesktop } from "../Menu/MenuDesktop";
+import { Navbar } from "../Navbar/Navbar";
 const Home: FC = () => {
   const router = useRouter();
   const { locale } = router;
   return (
     <>
-      <FavIcon />
+      <Navbar />
+      <MenuDesktop />
       <main className={styles.main}>
         <div className={styles.title}>
           <div className={styles.status}>
