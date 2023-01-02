@@ -5,10 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 2rem;
 }
 .main .status {
-  background-color: red;
+  background-color: #da1212;
   align-self: flex-start;
   border-radius: 15px;
   display: flex;
@@ -22,6 +21,10 @@
 .main .status span {
   font-size: 1rem;
   padding: 1px;
+  color: #fafafa;
+}
+
+.main a {
   color: #fafafa;
 }
 

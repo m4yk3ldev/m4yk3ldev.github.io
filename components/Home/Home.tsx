@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { FC } from "react";
 import { GetLocaleStorage } from "../../lib/locale";
@@ -19,7 +20,7 @@ const Home: FC = () => {
         <p className={styles.description}>Soy Desarrollador FrontEnd </p>
         <p>
           Contactarme :{" "}
-          <a
+          <Link
             type="email"
             href="mailto:hanibal920915@gmail.com"
             target="_blank"
@@ -27,7 +28,7 @@ const Home: FC = () => {
             className={styles.contact}
           >
             hanibal920915@gmail.com
-          </a>
+          </Link>
         </p>
       </main>
       <footer className={styles.footer}></footer>
