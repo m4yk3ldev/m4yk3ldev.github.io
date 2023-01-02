@@ -7,7 +7,6 @@ interface Props {
   children: JSX.Element;
 }
 const MainLayout: FC<Props> = ({ title, children }) => {
-  const urlPath = "https://maykelarias.tech";
   return (
     <>
       <Head>
@@ -15,7 +14,7 @@ const MainLayout: FC<Props> = ({ title, children }) => {
         <link rel="shortcut icon" type="image/jpg" href={favicon.src} />
         <link rel="apple-touch-icon" href={favicon.src} />
         <meta name="theme-color" content="#317EFB" />
-        <meta name="title" content="Hola, soy Maykel Arias Torres" />
+        <meta name="title" content={title + " |Maykel Tech"} />
         <meta
           name="description"
           content="Soy un desarrollador web con experiencia en HTML, CSS, JavaScript, NodeJS y Python."
@@ -33,8 +32,7 @@ const MainLayout: FC<Props> = ({ title, children }) => {
           property="og:description"
           content="Soy un desarrollador web con experiencia en HTML, CSS, JavaScript, NodeJS y Python."
         />
-        <meta property="og:image" content={urlPath + favicon.src} />
-
+        <meta property="og:image" content={favicon.src} />
         <meta property="twitter:card" content={favicon.src} />
         <meta property="twitter:url" content="https://maykelarias.tech/" />
         <meta
@@ -46,7 +44,7 @@ const MainLayout: FC<Props> = ({ title, children }) => {
           content="Soy un desarrollador web con experiencia en HTML, CSS, JavaScript, NodeJS y Python."
         />
         <meta property="twitter:image" content={favicon.src} />
-        <title>{title}</title>
+        <title>{title} | Maykel Tech</title>
       </Head>
       <Script
         strategy={"afterInteractive"}
