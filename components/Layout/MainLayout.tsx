@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Script from "next/script";
-import { FC } from "react";
+import { FC, useEffect } from "react";
+import favicon from "../../assert/image/logo.svg";
 interface Props {
   title: string;
   children: JSX.Element;
@@ -9,6 +10,8 @@ const MainLayout: FC<Props> = ({ title, children }) => {
   return (
     <>
       <Head>
+        <link rel="icon" type="image/x-icon" href={favicon.src} />
+        <link rel="shortcut icon" type="image/jpg" href={favicon.src}/>
         <title>{title}</title>
       </Head>
       <Script
@@ -32,6 +35,3 @@ const MainLayout: FC<Props> = ({ title, children }) => {
   );
 };
 export default MainLayout;
-
-
-
