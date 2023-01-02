@@ -1,5 +1,7 @@
 .favicon {
   display: flex;
+  position: sticky;
+  top: 0.8rem;
 }
 
 .favicon .img {
