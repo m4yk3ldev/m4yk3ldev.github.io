@@ -7,6 +7,7 @@ interface Props {
   children: JSX.Element;
 }
 const MainLayout: FC<Props> = ({ title, children }) => {
+  const urlPath = "maykelarias.tech";
   return (
     <>
       <Head>
@@ -32,7 +33,7 @@ const MainLayout: FC<Props> = ({ title, children }) => {
           property="og:description"
           content="Soy un desarrollador web con experiencia en HTML, CSS, JavaScript, NodeJS y Python."
         />
-        <meta property="og:image" content={favicon.src} />
+        <meta property="og:image" content={urlPath + favicon.src} />
 
         <meta property="twitter:card" content={favicon.src} />
         <meta property="twitter:url" content="https://maykelarias.tech/" />
