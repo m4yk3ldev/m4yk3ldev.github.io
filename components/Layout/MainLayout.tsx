@@ -7,7 +7,7 @@ interface Props {
   children: JSX.Element;
 }
 const MainLayout: FC<Props> = ({ title, children }) => {
-  const urlPath = "maykelarias.tech";
+  const urlPath = "https://maykelarias.tech";
   return (
     <>
       <Head>
