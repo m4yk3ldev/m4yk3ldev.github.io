@@ -3,10 +3,10 @@ import Script from "next/script";
 import { FC, useEffect } from "react";
 import favicon from "../../assert/image/logo.svg";
 interface Props {
-  title: string;
+  titleText: string;
   children: JSX.Element;
 }
-const MainLayout: FC<Props> = ({ title, children }) => {
+const MainLayout: FC<Props> = ({ titleText, children }) => {
   return (
     <>
       <Head>
@@ -14,7 +14,7 @@ const MainLayout: FC<Props> = ({ title, children }) => {
         <link rel="shortcut icon" type="image/jpg" href={favicon.src} />
         <link rel="apple-touch-icon" href={favicon.src} />
         <meta name="theme-color" content="#317EFB" />
-        <meta name="title" content={title + " |Maykel Tech"} />
+        <meta name="title" content={titleText + " | Maykel Tech"} />
         <meta
           name="description"
           content="Soy un desarrollador web con experiencia en HTML, CSS, JavaScript, NodeJS y Python."
@@ -44,7 +44,7 @@ const MainLayout: FC<Props> = ({ title, children }) => {
           content="Soy un desarrollador web con experiencia en HTML, CSS, JavaScript, NodeJS y Python."
         />
         <meta property="twitter:image" content={favicon.src} />
-        <title>{title} | Maykel Tech</title>
+        <title>{titleText} | Maykel Tech</title>
       </Head>
       <Script
         strategy={"afterInteractive"}
