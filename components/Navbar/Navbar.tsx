@@ -3,7 +3,7 @@ import FavIcon from "../FavIcon/FavIcon";
 import { LocaleSwitcher } from "../LocaleSwitcher/LocaleSwitcher";
 import styles from "./Navbar.module.css";
 
-export const Navbar = () => {
+export const Navbar: FC = () => {
   return (
     <>
       <div className={styles.navbar}>
