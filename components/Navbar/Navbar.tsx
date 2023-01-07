@@ -6,10 +6,10 @@ import styles from "./Navbar.module.css";
 export const Navbar: FC = () => {
   return (
     <>
-      <div className={styles.navbar}>
+      <nav className={styles.navbar}>
         <FavIcon />
         <LocaleSwitcher />
-      </div>
+      </nav>
     </>
   );
 };

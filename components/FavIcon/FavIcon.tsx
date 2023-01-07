@@ -1,7 +1,7 @@
 import { FC } from "react";
 import favicon from "../../assert/image/logo.svg";
 import Image from "next/image";
-import styles from "../../styles/FavIcon.module.css";
+import styles from "./FavIcon.module.css";
 const FavIcon: FC = () => {
   return (
     <>

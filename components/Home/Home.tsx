@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { FC } from "react";
 import { GetLocaleStorage } from "../../lib/locale";
-import styles from "../../styles/Home.module.css";
+import styles from "./Home.module.css";
 import { MenuDesktop } from "../Menu/MenuDesktop";
 import { Navbar } from "../Navbar/Navbar";
 const Home: FC = () => {
@@ -11,29 +11,28 @@ const Home: FC = () => {
   return (
     <>
       <Navbar />
-      <MenuDesktop />
-      <main className={styles.main}>
-        <div className={styles.title}>
-          <div className={styles.status}>
-            <span>En construcción</span>
+      <main className="col-3">
+        <MenuDesktop />
+        <div className={styles.main}>
+          <div className={styles.title}>
+            <h1>{GetLocaleStorage(locale).title}</h1>
           </div>
-          <h1>{GetLocaleStorage(locale).title}</h1>
+          <p className={styles.description}>Soy Desarrollador FrontEnd </p>
+          <p>
+            Contactarme :{" "}
+            <Link
+              type="email"
+              href="mailto:hanibal920915@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              className={styles.contact}
+            >
+              hanibal920915@gmail.com
+            </Link>
+          </p>
         </div>
-        <p className={styles.description}>Soy Desarrollador FrontEnd </p>
-        <p>
-          Contactarme :{" "}
-          <Link
-            type="email"
-            href="mailto:hanibal920915@gmail.com"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.contact}
-          >
-            hanibal920915@gmail.com
-          </Link>
-        </p>
       </main>
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>Creates to Maykel Arias Torres</footer>
     </>
   );
 };
