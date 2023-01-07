@@ -9,9 +9,9 @@ const Home: FC = () => {
   const router = useRouter();
   const { locale } = router;
   return (
-    <>
+    <div className="container">
       <Navbar />
-      <main className="col-3">
+      <main className="col-2">
         <MenuDesktop />
         <div className={styles.main}>
           <div className={styles.title}>
@@ -33,7 +33,7 @@ const Home: FC = () => {
         </div>
       </main>
       <footer className={styles.footer}>Created by Maykel Arias Torres</footer>
-    </>
+    </div>
   );
 };
 
