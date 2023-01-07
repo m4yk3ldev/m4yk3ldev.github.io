@@ -5,10 +5,10 @@ export const MenuDesktop: FC = () => {
   return (
     <>
       <div className="menuDesktop">
-        <ul>
-          <li>Home</li>
-          <li>Proyectos</li>
-        </ul>
+        {/*<ul>*/}
+        {/*  <li>Home</li>*/}
+        {/*  <li>Proyectos</li>*/}
+        {/*</ul>*/}
       </div>
     </>
   );

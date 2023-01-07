@@ -32,7 +32,7 @@ const Home: FC = () => {
           </p>
         </div>
       </main>
-      <footer className={styles.footer}>Creates to Maykel Arias Torres</footer>
+      <footer className={styles.footer}>Created by Maykel Arias Torres</footer>
     </>
   );
 };
