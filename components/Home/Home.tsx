@@ -20,7 +20,7 @@ const Home: FC = () => {
               Contactarme :{" "}
               <Link
                   type="email"
-                  href="mailto:hanibal920914@gmail.com"
+                  href="mailto:hanibal920915@gmail.com"
                   target="_blank"
                   rel="noreferrer"
                   className="font-bold text-lg text-center"
