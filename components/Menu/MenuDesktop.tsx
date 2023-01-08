@@ -1,15 +1,16 @@
-import { FC } from "react";
-import styles from "./MenuDesktop.module.css";
+import {FC} from "react";
 
-export const MenuDesktop: FC = () => {
-  return (
-    <>
-      <div className="menuDesktop">
-        {/*<ul>*/}
-        {/*  <li>Home</li>*/}
-        {/*  <li>Proyectos</li>*/}
-        {/*</ul>*/}
-      </div>
-    </>
-  );
+interface Props {
+    className: string;
+}
+
+export const MenuDesktop: FC<Props> = ({className}) => {
+    return (
+        <>
+            <div className={className}>
+                <p className="text-lg">Home</p>
+                <p className="text-base">Portafolio</p>
+            </div>
+        </>
+    );
 };

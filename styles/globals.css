@@ -3,7 +3,19 @@
 @tailwind utilities;
 html,
 body {
-  font-family: -apple-system, Montserrat , sans-serif;
-  color: #fafafa;
-  background: #004a7c;
+    font-family: -apple-system, Montserrat, sans-serif;
+    color: #fafafa;
+    background: #004a7c;
 }
+
+.main {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+

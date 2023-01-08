@@ -2,7 +2,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { FC } from "react";
 import { GetLocaleStorage } from "../../lib/locale";
-import styles from "./Home.module.css";
 import { MenuDesktop } from "../Menu/MenuDesktop";
 import { Navbar } from "../Navbar/Navbar";
 const Home: FC = () => {
@@ -11,28 +10,28 @@ const Home: FC = () => {
   return (
     <div className="mx-2.5">
       <Navbar />
-      <main className="col-2">
-        <MenuDesktop />
-        <div className={styles.main}>
-          <div className={styles.title}>
-            <h1>{GetLocaleStorage(locale).title}</h1>
+      <div className="main">
+        <MenuDesktop className="flex flex-col sticky inset-y-2/4" />
+        <div className="flex flex-col content-center items-center mx-auto min-h-screen">
+          <div className="flex my-auto flex-col">
+            <h1 className="m-0 text-6xl font-bold">{GetLocaleStorage(locale).title}</h1>
+            <p className="text-center text-lg text-blanco-light">Soy Desarrollador FrontEnd </p>
+            <p className="text-center text-lg text-blanco-light">
+              Contactarme :{" "}
+              <Link
+                  type="email"
+                  href="mailto:hanibal920914@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-bold text-lg text-center"
+              >
+                hanibal920914@gmail.com
+              </Link>
+            </p>
           </div>
-          <p className={styles.description}>Soy Desarrollador FrontEnd </p>
-          <p>
-            Contactarme :{" "}
-            <Link
-              type="email"
-              href="mailto:hanibal920915@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.contact}
-            >
-              hanibal920915@gmail.com
-            </Link>
-          </p>
         </div>
-      </main>
-      <footer className={styles.footer}>Created by Maykel Arias Torres</footer>
+      </div>
+      <footer className="flex justify-center bottom-full">Created by Maykel Arias Torres</footer>
     </div>
   );
 };
