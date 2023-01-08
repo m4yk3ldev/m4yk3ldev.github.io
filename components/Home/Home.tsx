@@ -9,7 +9,7 @@ const Home: FC = () => {
   const router = useRouter();
   const { locale } = router;
   return (
-    <div className="container">
+    <div className="mx-2.5">
       <Navbar />
       <main className="col-2">
         <MenuDesktop />
