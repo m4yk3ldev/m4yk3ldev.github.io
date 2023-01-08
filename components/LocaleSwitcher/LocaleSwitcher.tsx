@@ -6,7 +6,7 @@ export const LocaleSwitcher: FC = () => {
   return (
     <>
       <div className={styles.selectLang}>
-        <Image src={selectImage} alt="Select to image" />
+        <Image src={selectImage} alt="Select to image"  width={32} height={32}/>
       </div>
     </>
   );
