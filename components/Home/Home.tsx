@@ -25,7 +25,7 @@ const Home: FC = () => {
                   rel="noreferrer"
                   className="font-bold text-lg text-center"
               >
-                hanibal920914@gmail.com
+                hanibal920915@gmail.com
               </Link>
             </p>
           </div>
