@@ -4,17 +4,11 @@
 html,
 body {
     font-family: -apple-system, Montserrat, sans-serif;
-    color: #fafafa;
-    background: #004a7c;
+    @apply bg-azul-dark text-blanco-light
 }
 
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-around;
+    @apply flex items-center content-around flex-row flex-wrap justify-center
 }
 
 
