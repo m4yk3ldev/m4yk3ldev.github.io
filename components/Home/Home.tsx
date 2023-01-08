@@ -8,10 +8,10 @@ const Home: FC = () => {
   const router = useRouter();
   const { locale } = router;
   return (
-    <div className="mx-2.5">
+    <>
       <Navbar />
       <div className="main">
-        <MenuDesktop className="flex flex-col sticky inset-y-2/4" />
+        {/*<MenuDesktop className="flex flex-col sticky inset-y-2/4" />*/}
         <div className="flex flex-col content-center items-center mx-auto min-h-screen">
           <div className="flex my-auto flex-col">
             <h1 className="m-0 text-6xl font-bold">{GetLocaleStorage(locale).title}</h1>
@@ -32,7 +32,7 @@ const Home: FC = () => {
         </div>
       </div>
       <footer className="flex justify-center bottom-full">Created by Maykel Arias Torres</footer>
-    </div>
+    </>
   );
 };
 
