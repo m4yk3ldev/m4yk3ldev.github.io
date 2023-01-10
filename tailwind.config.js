@@ -11,12 +11,12 @@ module.exports = {
             },
             colors: {
                 azul: {
-                    dark: '#004A7C',
-                    light: '#005691',
+                    dark: '#06283D',
+                    light: '#256D85',
                 },
                 blanco: {
-                    dark: '#E8F1F5',
-                    light: '#FAFAFA',
+                    dark: '#47B5FF',
+                    light: '#DFF6FF',
                 }
             }
         },

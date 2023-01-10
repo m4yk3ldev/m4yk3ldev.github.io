@@ -1,15 +1,16 @@
 import {FC} from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-interface Props {
-    className: string;
-}
+import github from "../../assert/image/redes/github.svg";
 
-export const MenuDesktop: FC<Props> = ({className}) => {
+
+
+export const MenuDesktop: FC = () => {
     return (
         <>
-            <div className={className}>
-                {/*<p className="text-lg">Home</p>*/}
-                {/*<p className="text-base">Portafolio</p>*/}
+            <div className="menuDesktop">
+
             </div>
         </>
     );

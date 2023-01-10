@@ -11,4 +11,11 @@ body {
     @apply flex items-center content-around flex-row flex-wrap justify-center
 }
 
+.menuDesktop {
+    border-radius: 20px;
+    z-index: 999;
+    width: 40px;
+    @apply flex flex-col sticky inset-y-2/4 bg-blanco-dark justify-center items-center shadow
+}
+
 

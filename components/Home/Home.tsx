@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {useRouter} from "next/router";
 import {FC} from "react";
 import {Navbar} from "../Navbar/Navbar";
@@ -11,7 +10,7 @@ const Home: FC = () => {
     return (
         <>
             <Navbar/>
-            <MenuDesktop className="flex flex-col sticky inset-y-2/4" />
+            <MenuDesktop  />
             <Hero locale={locale || "es"}/>
         </>
     );
