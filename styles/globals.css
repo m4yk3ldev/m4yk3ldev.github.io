@@ -4,15 +4,51 @@
 html,
 body {
     font-family: -apple-system, Montserrat, sans-serif;
-    @apply bg-azul-dark text-blanco-light;
-    transition: 0.5s;
+    @apply text-blanco-light;
+    background: linear-gradient(180deg, #06283d, #245565);
+    background-size: 400% 400%;
+
+    -webkit-animation: backgroundAnimate 7s ease infinite;
+    -moz-animation: backgroundAnimate 7s ease infinite;
+    -o-animation: backgroundAnimate 7s ease infinite;
+    animation: backgroundAnimate 7s ease infinite;
+
 }
+@-webkit-keyframes backgroundAnimate {
+    0%{background-position:24% 0
+    }
+    50%{background-position:77% 100%}
+    100%{background-position:24% 0
+    }
+}
+@-moz-keyframes backgroundAnimate {
+    0%{background-position:24% 0
+    }
+    50%{background-position:77% 100%}
+    100%{background-position:24% 0
+    }
+}
+@-o-keyframes backgroundAnimate {
+    0%{background-position:24% 0
+    }
+    50%{background-position:77% 100%}
+    100%{background-position:24% 0
+    }
+}
+@keyframes backgroundAnimate {
+    0%{background-position:24% 0
+    }
+    50%{background-position:77% 100%}
+    100%{background-position:24% 0
+    }
+}
+
 
 .main {
     @apply flex items-center content-around flex-row flex-wrap justify-center;
 }
 
-.mouseaction{
+.mouseaction {
     @apply hover:scale-110 transition delay-150 duration-150 ease-in-out;
 }
 
@@ -20,6 +56,6 @@ body {
     @apply cursor-pointer hover:bg-azul-light hover:rounded px-2 py-1 whitespace-nowrap;
 }
 
-.menu li.active{
+.menu li.active {
     @apply underline text-blanco-light rounded bg-azul-light;
 }
