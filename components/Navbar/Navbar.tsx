@@ -13,7 +13,7 @@ export const Navbar: FC = () => {
                 <FavIcon/>
                 <div className="flex flex-row gap-2">
                     <MenuDesktop />
-                    <Link href="/cv/CVV.pdf" target="_blank">
+                    <Link href="/cv/pt.pdf" target="_blank">
                         <Image src={cvvImage} width={32} height={32} alt="Download CVV"
                                className="cursor-pointer mr-1 mouseaction"/>
                     </Link>

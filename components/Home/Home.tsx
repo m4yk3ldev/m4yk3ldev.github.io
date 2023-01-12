@@ -10,7 +10,6 @@ const Home: FC = () => {
         <div className="container mx-auto">
             <Navbar/>
             <Hero locale={locale || "es"}/>
-
         </div>
     );
 };
