@@ -7,7 +7,7 @@ const FavIcon: FC = () => {
     <>
       <div className="flex">
           <Link href="/">
-              <Image src={favicon} alt="Favicon"  width={50} height={50} />
+              <Image src={favicon} alt="Favicon"  width={50} height={50} className="mouseaction" />
           </Link>
       </div>
     </>

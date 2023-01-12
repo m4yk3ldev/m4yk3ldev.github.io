@@ -4,18 +4,22 @@
 html,
 body {
     font-family: -apple-system, Montserrat, sans-serif;
-    @apply bg-azul-dark text-blanco-light
+    @apply bg-azul-dark text-blanco-light;
+    transition: 0.5s;
 }
 
 .main {
-    @apply flex items-center content-around flex-row flex-wrap justify-center
+    @apply flex items-center content-around flex-row flex-wrap justify-center;
 }
 
-.menuDesktop {
-    border-radius: 20px;
-    z-index: 999;
-    width: 40px;
-    @apply flex flex-col sticky inset-y-2/4 bg-blanco-dark justify-center items-center shadow
+.mouseaction{
+    @apply hover:scale-110 transition delay-150 duration-150 ease-in-out;
 }
 
+.menu li {
+    @apply cursor-pointer hover:bg-azul-light hover:rounded px-2 py-1 whitespace-nowrap;
+}
 
+.menu li.active{
+    @apply underline text-blanco-light rounded bg-azul-light;
+}

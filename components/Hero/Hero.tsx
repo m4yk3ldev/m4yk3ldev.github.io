@@ -20,15 +20,15 @@ const Hero: FC<Props> = ({locale}) => {
                 <p className="text-center text-lg text-blanco-light self-end my-2.5">Soy Desarrollador FrontEnd </p>
                 <p className="text-center text-lg text-blanco-light self-end flex flex-row items-center justify-center gap-1">
                     <Link href="https://github.com/m4yk3ldev" target="_blank" rel="noopener"
-                          className="font-bold text-lg text-center">
+                          className="font-bold text-lg text-center mouseaction">
                         <Image src={github} alt="Github" width={30} height={30}/>
                     </Link>
                     <Link href="https://www.linkedin.com/in/maykel-arias-torres-b827a6136/" target="_blank"
-                          rel="noopener" className="font-bold text-lg text-center">
+                          rel="noopener" className="font-bold text-lg text-center mouseaction">
                         <Image src={linkedin} alt="Github" width={30} height={30}/>
                     </Link>
                     <Link href="https://twitter.com/Maykel920915" target="_blank" rel="noopener"
-                          className="font-bold text-lg text-center">
+                          className="font-bold text-lg text-center mouseaction">
                         <Image src={twitter} alt="Twitter" width={30} height={30}/>
                     </Link>
                     <Link
@@ -36,7 +36,7 @@ const Hero: FC<Props> = ({locale}) => {
                         href="mailto:hanibal920915@gmail.com"
                         target="_blank"
                         rel="noreferrer"
-                        className="font-bold text-lg text-center"
+                        className="font-bold text-lg text-center mouseaction"
                     >
                         <Image src={gmail} alt="Gmail Email" width={30} height={30}/>
                     </Link>

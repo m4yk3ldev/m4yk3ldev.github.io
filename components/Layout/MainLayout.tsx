@@ -61,7 +61,7 @@ const MainLayout: FC<Props> = ({ titleText, children }) => {
           gtag('config', 'G-9DN35DFS38');
         `,
         }}
-      ></Script>
+      />
       {children}
     </>
   );
