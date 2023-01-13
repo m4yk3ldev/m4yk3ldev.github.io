@@ -1,12 +1,12 @@
 import Head from "next/head";
 import Script from "next/script";
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import favicon from "../../assert/image/logo.svg";
 interface Props {
   titleText: string;
   children: JSX.Element;
 }
-const MainLayout: FC<Props> = ({ titleText, children }) => {
+const MainLayout: FC<Props> = ({ titleText = "Bienvenido", children }) => {
   return (
     <>
       <Head>
