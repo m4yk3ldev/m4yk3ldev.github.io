@@ -4,7 +4,7 @@ import Link from "next/link";
 export const MenuDesktop: FC = () => {
   return (
     <>
-      <div className="menu pr-3">
+      <div className="menu">
         <div className="navigation flex">
           <div className="menuToggle"></div>
           <ul className="flex flex-row gap-2">

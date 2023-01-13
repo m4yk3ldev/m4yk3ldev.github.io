@@ -38,35 +38,45 @@ export const LocaleSwitcher: FC = () => {
   };
 
   return (
-    <div className="flex flex-row gap-1 flex-wrap items-start content-start">
-      <div className="langMenu flex flex-col">
+    <div className="dropdown relative mt-2 inline-block content-center items-center self-center rounded">
+      <button
+        className="inline-flex items-center rounded bg-azul-light"
+        onClick={handleMenu}
+      >
         <Image
           src={getImageFlag(activeLocale ?? "es")}
           alt="Select image"
-          width={35}
-          height={32}
+          width={40}
+          height={40}
           onClick={handleMenu}
-          className="h-100 mouseaction"
+          className="mouseaction rounded"
         />
-        <ul className={"selectLang " + classMenu}>
-          {otherLocales.map((locale) => {
-            return (
-              <li key={locale} className="mt-1">
-                <Link href={{ pathname, query }} as={asPath} locale={locale}>
-                  <Image
-                    src={getImageFlag(locale)}
-                    alt={"Select image " + locale}
-                    width={40}
-                    height={40}
-                    key={locale}
-                    className="hover:scale-110 delay-150 duration-150 ease-in-out"
-                  />
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      </button>
+      <ul
+        className={`dropdown-menu absolute ${classMenu}  rounded-t rounded-b`}
+      >
+        {otherLocales.map((locale) => {
+          return (
+            <li key={locale} onClick={() => setClassMenu("hidden")}>
+              <Link
+                href={{ pathname, query }}
+                as={asPath}
+                locale={locale}
+                className="whitespace-no-wrap block hover:scale-110"
+              >
+                <Image
+                  src={getImageFlag(locale)}
+                  alt={"Select image " + locale}
+                  width={40}
+                  height={40}
+                  key={locale}
+                  className="mt-1 rounded"
+                />
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };

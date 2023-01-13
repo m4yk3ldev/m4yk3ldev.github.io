@@ -22,7 +22,7 @@ body {
 }
 
 .main {
-  @apply flex flex-row flex-wrap content-around items-center justify-center;
+  height: 50px;
 }
 
 .mouseaction {
@@ -39,4 +39,7 @@ body {
 
 .langMenu ul .selectLang {
   @apply absolute top-10 flex flex-col overflow-hidden bg-transparent text-blanco-light;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
