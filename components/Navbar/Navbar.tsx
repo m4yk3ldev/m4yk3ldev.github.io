@@ -13,7 +13,7 @@ export const Navbar: FC = () => {
   const { locale } = router;
   return (
     <>
-      <nav className="sticky top-1 top-3.5 w-100 h-auto max-h-full">
+      <nav className="w-100 sticky top-3.5 h-auto max-h-full">
         <div className="flex flex-row justify-between">
           <div className="flex flex-row flex-nowrap content-center items-center justify-between">
             <FavIcon />
@@ -29,7 +29,7 @@ export const Navbar: FC = () => {
                   width={32}
                   height={32}
                   alt="Download CVV"
-                  className="cursor-pointer mr-1 mouseaction"
+                  className="mouseaction mr-1 cursor-pointer"
                 />
               </Link>
             </div>

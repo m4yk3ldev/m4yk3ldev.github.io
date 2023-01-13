@@ -7,49 +7,8 @@ body {
   @apply text-blanco-light;
   background: linear-gradient(180deg, #06283d, #245565);
   background-size: 400% 400%;
-
-  -webkit-animation: backgroundAnimate 7s ease infinite;
-  -moz-animation: backgroundAnimate 7s ease infinite;
-  -o-animation: backgroundAnimate 7s ease infinite;
   animation: backgroundAnimate 7s ease infinite;
 }
-
-@-webkit-keyframes backgroundAnimate {
-  0% {
-    background-position: 24% 0;
-  }
-  50% {
-    background-position: 77% 100%;
-  }
-  100% {
-    background-position: 24% 0;
-  }
-}
-
-@-moz-keyframes backgroundAnimate {
-  0% {
-    background-position: 24% 0;
-  }
-  50% {
-    background-position: 77% 100%;
-  }
-  100% {
-    background-position: 24% 0;
-  }
-}
-
-@-o-keyframes backgroundAnimate {
-  0% {
-    background-position: 24% 0;
-  }
-  50% {
-    background-position: 77% 100%;
-  }
-  100% {
-    background-position: 24% 0;
-  }
-}
-
 @keyframes backgroundAnimate {
   0% {
     background-position: 24% 0;
@@ -63,22 +22,21 @@ body {
 }
 
 .main {
-  @apply flex items-center content-around flex-row flex-wrap justify-center;
+  @apply flex flex-row flex-wrap content-around items-center justify-center;
 }
 
 .mouseaction {
-  @apply hover:scale-110 transition delay-150 duration-150 ease-in-out;
+  @apply transition delay-150 duration-150 ease-in-out hover:scale-110;
 }
 
 .menu li {
-  @apply cursor-pointer hover:bg-azul-light hover:rounded px-2 py-1 whitespace-nowrap;
+  @apply cursor-pointer whitespace-nowrap px-2 py-1 hover:rounded hover:bg-azul-light;
 }
 
 .menu li.active {
-  @apply underline text-blanco-light rounded bg-azul-light;
+  @apply rounded bg-azul-light text-blanco-light underline;
 }
 
 .langMenu ul .selectLang {
-  @apply flex absolute top-10 flex-col bg-transparent text-blanco-light overflow-hidden;
+  @apply absolute top-10 flex flex-col overflow-hidden bg-transparent text-blanco-light;
 }
-

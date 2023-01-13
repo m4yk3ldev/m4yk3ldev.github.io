@@ -11,26 +11,25 @@ import linkedin from "../../assert/image/redes/linkedin.svg";
 interface Props {
   locale: string;
 }
-
 const Hero: FC<Props> = ({ locale }) => {
   return (
     <div
-      className="flex flex-col content-center items-center mx-auto min-h-screen h-screen"
+      className="mx-auto flex h-screen min-h-screen flex-col content-center items-center"
       id="Home"
     >
-      <div className="flex my-auto flex-col">
-        <h1 className="m-0 md:text-4xl lg:text-6xl font-bold text-blanco-light text-2xl">
+      <div className="my-auto flex flex-col">
+        <h1 className="m-0 text-2xl font-bold text-blanco-light md:text-4xl lg:text-6xl">
           {GetLocaleStorage(locale).title}
         </h1>
-        <p className="text-center text-lg text-blanco-light self-end my-2.5">
+        <p className="my-2.5 self-end text-center text-lg text-blanco-light">
           Soy Desarrollador FrontEnd{" "}
         </p>
-        <p className="text-center text-lg text-blanco-light self-end flex flex-row items-center justify-center gap-1">
+        <p className="flex flex-row items-center justify-center gap-1 self-end text-center text-lg text-blanco-light">
           <Link
             href="https://github.com/m4yk3ldev"
             target="_blank"
             rel="noopener"
-            className="font-bold text-lg text-center mouseaction"
+            className="mouseaction text-center text-lg font-bold"
           >
             <Image src={github} alt="Github" width={30} height={30} />
           </Link>
@@ -38,7 +37,7 @@ const Hero: FC<Props> = ({ locale }) => {
             href="https://www.linkedin.com/in/maykel-arias-torres-b827a6136/"
             target="_blank"
             rel="noopener"
-            className="font-bold text-lg text-center mouseaction"
+            className="mouseaction text-center text-lg font-bold"
           >
             <Image src={linkedin} alt="Github" width={30} height={30} />
           </Link>
@@ -46,7 +45,7 @@ const Hero: FC<Props> = ({ locale }) => {
             href="https://twitter.com/Maykel920915"
             target="_blank"
             rel="noopener"
-            className="font-bold text-lg text-center mouseaction"
+            className="mouseaction text-center text-lg font-bold"
           >
             <Image src={twitter} alt="Twitter" width={30} height={30} />
           </Link>
@@ -55,7 +54,7 @@ const Hero: FC<Props> = ({ locale }) => {
             href="mailto:hanibal920915@gmail.com"
             target="_blank"
             rel="noreferrer"
-            className="font-bold text-lg text-center mouseaction"
+            className="mouseaction text-center text-lg font-bold"
           >
             <Image src={gmail} alt="Gmail Email" width={30} height={30} />
           </Link>
@@ -66,4 +65,3 @@ const Hero: FC<Props> = ({ locale }) => {
 };
 
 export default Hero;
-
