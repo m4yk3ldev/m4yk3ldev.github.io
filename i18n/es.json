@@ -1,0 +1,13 @@
+{
+  "Index": {
+    "title": "Bienvenido"
+  },
+  "MenuDesktop": {
+    "home": "Inicio",
+    "about": "Acerca"
+  },
+  "Hero": {
+    "title": "Hola, soy Maykel Arias Torres",
+    "description": "Soy Desarrollador Front-End"
+  }
+}

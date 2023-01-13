@@ -1,0 +1,13 @@
+{
+  "Index": {
+    "title": "Welcome"
+  },
+  "MenuDesktop": {
+    "home": "Home",
+    "about": "About"
+  },
+  "Hero": {
+    "title": "Hello, i am Maykel Arias Torres",
+    "description": "I'm front-end developer"
+  }
+}

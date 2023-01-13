@@ -4,3 +4,4 @@ export const getCanonicalUrl: string =
     : "https://maykelarias.tech";
 export const defaultLang: string = "es";
 
+export const locales = ["es", "en", "pt"]

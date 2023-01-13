@@ -1,5 +1,12 @@
 {
-  "cSpell.words": ["gmail", "gtag", "linkedin", "mouseaction", "tailwindcss"],
+  "cSpell.words": [
+    "gmail",
+    "gtag",
+    "linkedin",
+    "mouseaction",
+    "tailwindcss",
+    "unoptimized"
+  ],
   "editor.formatOnSave": true,
   "files.associations": {
     "*.css": "tailwindcss"

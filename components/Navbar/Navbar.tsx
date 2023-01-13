@@ -1,16 +1,19 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import FavIcon from "../FavIcon/FavIcon";
 import { LocaleSwitcher } from "../LocaleSwitcher/LocaleSwitcher";
 import Image from "next/image";
 import cvvImage from "../../assert/image/cvv.svg";
 import Link from "next/link";
 import { MenuDesktop } from "../Menu/MenuDesktop";
+import { defaultLang, getCanonicalUrl } from "../../lib/config";
 import { useRouter } from "next/router";
-import { getCanonicalUrl } from "../../lib/config";
 
 export const Navbar: FC = () => {
+  const [locale, setLocale] = useState(defaultLang);
   const router = useRouter();
-  const { locale } = router;
+  useEffect(() => {
+    setLocale(localStorage.getItem("locale") ?? defaultLang);
+  }, [router]);
   return (
     <>
       <nav className="main sticky top-3.5 flex max-h-full flex-row flex-nowrap content-center items-center justify-between">

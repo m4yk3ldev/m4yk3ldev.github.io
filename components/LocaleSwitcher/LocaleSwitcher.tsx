@@ -8,6 +8,7 @@ import select from "../../assert/image/lang/select.svg";
 import en from "../../assert/image/lang/en.svg";
 import es from "../../assert/image/lang/es.svg";
 import pt from "../../assert/image/lang/pt.svg";
+import { defaultLang, locales } from "../../lib/config";
 
 export const getImageFlag = (flag: string): StaticImageData => {
   switch (flag) {
@@ -24,10 +25,9 @@ export const getImageFlag = (flag: string): StaticImageData => {
 
 export const LocaleSwitcher: FC = () => {
   const router = useRouter();
-  const { locales, locale: activeLocale, pathname, query, asPath } = router;
-  const otherLocales = (locales || []).filter(
-    (locale) => locale !== activeLocale
-  );
+  const { pathname, query, asPath } = router;
+  const [activeLocale, setActiveLocale] = useState(defaultLang);
+  const otherLocales = locales.filter((locale) => locale !== activeLocale);
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [classMenu, setClassMenu] = useState<string>("hidden");
   useEffect(() => {
@@ -36,6 +36,10 @@ export const LocaleSwitcher: FC = () => {
   const handleMenu = () => {
     setShowMenu(!showMenu);
   };
+  useEffect(() => {
+    setActiveLocale(localStorage.getItem("locale") ?? defaultLang);
+  }, []);
+  console.log({ router });
 
   return (
     <div className="dropdown relative mt-2 inline-block content-center items-center self-center rounded">
@@ -55,21 +59,23 @@ export const LocaleSwitcher: FC = () => {
       <ul
         className={`dropdown-menu absolute ${classMenu}  rounded-t rounded-b`}
       >
-        {otherLocales.map((locale) => {
+        {otherLocales.map((l) => {
           return (
-            <li key={locale} onClick={() => setClassMenu("hidden")}>
+            <li key={l} onClick={() => setClassMenu("hidden")}>
               <Link
-                href={{ pathname, query }}
-                as={asPath}
-                locale={locale}
+                href={`${l}`}
                 className="whitespace-no-wrap block hover:scale-110"
+                onClick={() => {
+                  localStorage.setItem("locale", l);
+                  setActiveLocale(l);
+                }}
               >
                 <Image
-                  src={getImageFlag(locale)}
-                  alt={"Select image " + locale}
+                  src={getImageFlag(l)}
+                  alt={"Select image " + l}
                   width={40}
                   height={40}
-                  key={locale}
+                  key={l}
                   className="mt-1 rounded"
                 />
               </Link>
