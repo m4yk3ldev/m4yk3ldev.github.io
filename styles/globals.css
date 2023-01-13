@@ -3,59 +3,82 @@
 @tailwind utilities;
 html,
 body {
-    font-family: -apple-system, Montserrat, sans-serif;
-    @apply text-blanco-light;
-    background: linear-gradient(180deg, #06283d, #245565);
-    background-size: 400% 400%;
+  font-family: -apple-system, Montserrat, sans-serif;
+  @apply text-blanco-light;
+  background: linear-gradient(180deg, #06283d, #245565);
+  background-size: 400% 400%;
 
-    -webkit-animation: backgroundAnimate 7s ease infinite;
-    -moz-animation: backgroundAnimate 7s ease infinite;
-    -o-animation: backgroundAnimate 7s ease infinite;
-    animation: backgroundAnimate 7s ease infinite;
-
+  -webkit-animation: backgroundAnimate 7s ease infinite;
+  -moz-animation: backgroundAnimate 7s ease infinite;
+  -o-animation: backgroundAnimate 7s ease infinite;
+  animation: backgroundAnimate 7s ease infinite;
 }
+
 @-webkit-keyframes backgroundAnimate {
-    0%{background-position:24% 0
-    }
-    50%{background-position:77% 100%}
-    100%{background-position:24% 0
-    }
-}
-@-moz-keyframes backgroundAnimate {
-    0%{background-position:24% 0
-    }
-    50%{background-position:77% 100%}
-    100%{background-position:24% 0
-    }
-}
-@-o-keyframes backgroundAnimate {
-    0%{background-position:24% 0
-    }
-    50%{background-position:77% 100%}
-    100%{background-position:24% 0
-    }
-}
-@keyframes backgroundAnimate {
-    0%{background-position:24% 0
-    }
-    50%{background-position:77% 100%}
-    100%{background-position:24% 0
-    }
+  0% {
+    background-position: 24% 0;
+  }
+  50% {
+    background-position: 77% 100%;
+  }
+  100% {
+    background-position: 24% 0;
+  }
 }
 
+@-moz-keyframes backgroundAnimate {
+  0% {
+    background-position: 24% 0;
+  }
+  50% {
+    background-position: 77% 100%;
+  }
+  100% {
+    background-position: 24% 0;
+  }
+}
+
+@-o-keyframes backgroundAnimate {
+  0% {
+    background-position: 24% 0;
+  }
+  50% {
+    background-position: 77% 100%;
+  }
+  100% {
+    background-position: 24% 0;
+  }
+}
+
+@keyframes backgroundAnimate {
+  0% {
+    background-position: 24% 0;
+  }
+  50% {
+    background-position: 77% 100%;
+  }
+  100% {
+    background-position: 24% 0;
+  }
+}
 
 .main {
-    @apply flex items-center content-around flex-row flex-wrap justify-center;
+  @apply flex items-center content-around flex-row flex-wrap justify-center;
 }
 
 .mouseaction {
-    @apply hover:scale-110 transition delay-150 duration-150 ease-in-out;
+  @apply hover:scale-110 transition delay-150 duration-150 ease-in-out;
 }
 
 .menu li {
-    @apply cursor-pointer hover:bg-azul-light hover:rounded px-2 py-1 whitespace-nowrap;
+  @apply cursor-pointer hover:bg-azul-light hover:rounded px-2 py-1 whitespace-nowrap;
 }
 
 .menu li.active {
-    @apply underline text-blanco-light rounded bg-azul-light;
+  @apply underline text-blanco-light rounded bg-azul-light;
 }
+
+.langMenu ul .selectLang {
+  @apply flex absolute top-10 flex-col bg-transparent text-blanco-light overflow-hidden;
+}
+
