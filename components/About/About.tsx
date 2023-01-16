@@ -10,7 +10,7 @@ import linkedin from "../../assert/image/redes/linkedin.svg";
 import { defaultLang } from "../../lib/config";
 import { useRouter } from "next/router";
 
-const Hero: FC = () => {
+const About: FC = () => {
   const [locale, setLocale] = useState<TypeLocale>(defaultLang);
   const router = useRouter();
   const [t, setT] = useState(GetLocaleStorage(locale).Hero);
@@ -23,7 +23,7 @@ const Hero: FC = () => {
   return (
     <div
       className="mx-auto flex h-screen min-h-screen flex-col content-center items-center"
-      id="Home"
+      id="About"
     >
       <div className="my-auto flex flex-col">
         <h1 className="m-0 text-2xl font-bold text-blanco-light md:text-4xl lg:text-6xl">
@@ -72,4 +72,4 @@ const Hero: FC = () => {
   );
 };
 
-export default Hero;
+export default About;

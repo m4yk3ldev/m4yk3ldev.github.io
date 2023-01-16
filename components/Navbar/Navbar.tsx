@@ -7,12 +7,13 @@ import Link from "next/link";
 import { MenuDesktop } from "../Menu/MenuDesktop";
 import { defaultLang, getCanonicalUrl } from "../../lib/config";
 import { useRouter } from "next/router";
+import { TypeLocale } from "../../lib/locale";
 
 export const Navbar: FC = () => {
-  const [locale, setLocale] = useState(defaultLang);
+  const [locale, setLocale] = useState<TypeLocale>(defaultLang);
   const router = useRouter();
   useEffect(() => {
-    setLocale(localStorage.getItem("locale") ?? defaultLang);
+    setLocale((localStorage.getItem("locale") as TypeLocale) ?? defaultLang);
   }, [router]);
   return (
     <>

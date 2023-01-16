@@ -9,8 +9,9 @@ import en from "../../assert/image/lang/en.svg";
 import es from "../../assert/image/lang/es.svg";
 import pt from "../../assert/image/lang/pt.svg";
 import { defaultLang, locales } from "../../lib/config";
+import { TypeLocale } from "../../lib/locale";
 
-export const getImageFlag = (flag: string): StaticImageData => {
+export const getImageFlag = (flag: TypeLocale): StaticImageData => {
   switch (flag) {
     case "en":
       return en;
@@ -26,7 +27,7 @@ export const getImageFlag = (flag: string): StaticImageData => {
 export const LocaleSwitcher: FC = () => {
   const router = useRouter();
   const { pathname, query, asPath } = router;
-  const [activeLocale, setActiveLocale] = useState(defaultLang);
+  const [activeLocale, setActiveLocale] = useState<TypeLocale>(defaultLang);
   const otherLocales = locales.filter((locale) => locale !== activeLocale);
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [classMenu, setClassMenu] = useState<string>("hidden");
@@ -37,7 +38,9 @@ export const LocaleSwitcher: FC = () => {
     setShowMenu(!showMenu);
   };
   useEffect(() => {
-    setActiveLocale(localStorage.getItem("locale") ?? defaultLang);
+    setActiveLocale(
+      (localStorage.getItem("locale") as TypeLocale) ?? defaultLang
+    );
   }, []);
   console.log({ router });
 

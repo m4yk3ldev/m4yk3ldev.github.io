@@ -2,14 +2,14 @@ import { FC, useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { defaultLang } from "../../lib/config";
-import { GetLocaleStorage } from "../../lib/locale";
+import { GetLocaleStorage, TypeLocale } from "../../lib/locale";
 
 export const MenuDesktop: FC = () => {
-  const [locale, setLocale] = useState(defaultLang);
+  const [locale, setLocale] = useState<TypeLocale>(defaultLang);
   const router = useRouter();
   const [t, setT] = useState(GetLocaleStorage(locale).MenuDesktop);
   useEffect(() => {
-    setLocale(localStorage.getItem("locale") ?? defaultLang);
+    setLocale((localStorage.getItem("locale") as TypeLocale) ?? defaultLang);
   }, [router]);
   useEffect(() => {
     setT(GetLocaleStorage(locale).MenuDesktop);
