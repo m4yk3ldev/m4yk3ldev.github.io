@@ -15,11 +15,13 @@ const About: FC = () => {
   }, [locale]);
   return (
     <section id="About" className="about">
-      <h2>{t.title}</h2>
       <div>
-        {t.description.map((d) => {
-          return <p key={d}>{d}</p>;
-        })}
+        <h2>{t.title}</h2>
+        <div>
+          {t.description.map((d) => {
+            return <p key={d}>{d}</p>;
+          })}
+        </div>
       </div>
     </section>
   );

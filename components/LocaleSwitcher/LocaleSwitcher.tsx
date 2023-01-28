@@ -61,7 +61,6 @@ export const LocaleSwitcher: FC = () => {
             <li key={l} onClick={() => setClassMenu("hidden")}>
               <Link
                 href={`${l}`}
-                className="whitespace-no-wrap block hover:scale-110"
                 onClick={() => {
                   localStorage.setItem("locale", l);
                   setActiveLocale(l);
@@ -73,7 +72,6 @@ export const LocaleSwitcher: FC = () => {
                   width={40}
                   height={40}
                   key={l}
-                  className="mt-1 rounded"
                 />
               </Link>
             </li>

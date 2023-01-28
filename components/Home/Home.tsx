@@ -7,8 +7,10 @@ const Home: FC = () => {
   return (
     <div className="container mx-auto">
       <Navbar />
-      <Hero />
-      <About />
+      <div className="scrolls">
+        <Hero />
+        <About />
+      </div>
     </div>
   );
 };

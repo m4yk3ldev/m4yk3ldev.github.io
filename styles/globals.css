@@ -23,6 +23,10 @@ body {
 .mouseaction {
   @apply transition delay-150 duration-150 ease-in-out hover:scale-110;
 }
+.scrolls {
+  @apply flex flex-col;
+  overflow: hidden;
+}
 
 /*NAVBAR*/
 nav {
@@ -47,11 +51,12 @@ nav .sectionMenu {
 .langMenu ul .selectLang {
   @apply absolute top-10 flex flex-col overflow-hidden bg-transparent text-blanco-light;
 }
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
 nav .dropdown {
   @apply relative mt-2 inline-block content-center items-center self-center rounded;
+}
+
+nav .dropdown:hover .dropdown-menu {
+  @apply block;
 }
 nav .dropdown button {
   @apply inline-flex items-center rounded bg-azul-light;
@@ -59,13 +64,22 @@ nav .dropdown button {
 nav .dropdown button img {
   @apply mouseaction rounded;
 }
-nav .dropdown-menu {
+nav ul.dropdown-menu {
   @apply absolute rounded-t rounded-b;
+}
+nav ul.dropdown-menu li a {
+  @apply block hover:scale-110;
+}
+nav ul.dropdown-menu li img {
+  @apply mt-1 rounded;
 }
 
 /*END NAVBAR*/
 
 /*Section Home*/
+section {
+  transition: all 0.4s;
+}
 
 section.home {
   @apply mx-auto flex h-screen min-h-screen flex-col content-center items-center;
@@ -92,14 +106,16 @@ section.home div p.social a {
 /*SECTION ABOUT*/
 
 section.about {
-  @apply mx-auto flex flex-col items-center;
-  height: 50vh;
-}
-
-section.about h2 {
-  @apply text-2xl font-bold text-blanco-light md:text-4xl lg:text-6xl;
+  @apply mx-auto flex h-screen min-h-screen flex-col content-center items-center;
 }
 section.about div {
+  @apply my-auto flex flex-col items-center;
+}
+
+section.about div h2 {
+  @apply text-2xl font-bold text-blanco-light md:text-4xl lg:text-6xl;
+}
+section.about div div.description {
   @apply container mx-auto;
 }
 
