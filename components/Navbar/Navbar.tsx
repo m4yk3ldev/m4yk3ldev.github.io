@@ -19,7 +19,7 @@ export const Navbar: FC = () => {
     <>
       <nav>
         <FavIcon />
-        <div className="flex flex-row content-center items-center justify-center gap-2">
+        <div className="sectionMenu">
           <MenuDesktop />
           <Link
             href={`${getCanonicalUrl}/cv/${locale}.pdf`}

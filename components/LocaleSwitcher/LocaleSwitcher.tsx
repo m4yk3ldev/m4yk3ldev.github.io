@@ -45,23 +45,17 @@ export const LocaleSwitcher: FC = () => {
   console.log({ router });
 
   return (
-    <div className="dropdown relative mt-2 inline-block content-center items-center self-center rounded">
-      <button
-        className="inline-flex items-center rounded bg-azul-light"
-        onClick={handleMenu}
-      >
+    <div className="dropdown">
+      <button onClick={handleMenu}>
         <Image
           src={getImageFlag(activeLocale ?? "es")}
           alt="Select image"
           width={40}
           height={40}
           onClick={handleMenu}
-          className="mouseaction rounded"
         />
       </button>
-      <ul
-        className={`dropdown-menu absolute ${classMenu}  rounded-t rounded-b`}
-      >
+      <ul className={`dropdown-menu  ${classMenu}`}>
         {otherLocales.map((l) => {
           return (
             <li key={l} onClick={() => setClassMenu("hidden")}>

@@ -6,7 +6,7 @@ import Link from "next/link";
 const FavIcon: FC = () => {
   return (
     <>
-      <div className="flex">
+      <div className="favicon">
         <Link href="/">
           <Image
             src={favicon}

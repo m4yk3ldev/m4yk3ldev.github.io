@@ -20,6 +20,9 @@ body {
     background-position: 24% 0;
   }
 }
+.mouseaction {
+  @apply transition delay-150 duration-150 ease-in-out hover:scale-110;
+}
 
 /*NAVBAR*/
 nav {
@@ -27,14 +30,12 @@ nav {
   backdrop-filter: blur(2px);
   height: 50px;
 }
-
-/*END NAVBAR*/
-
-.mouseaction {
-  @apply transition delay-150 duration-150 ease-in-out hover:scale-110;
+nav .favicon {
+  @apply flex;
 }
-
-/*FAVICON*/
+nav .sectionMenu {
+  @apply flex flex-row content-center items-center justify-center gap-2;
+}
 .menu li {
   @apply cursor-pointer whitespace-nowrap px-2 py-1 hover:rounded hover:bg-azul-light;
 }
@@ -49,7 +50,20 @@ nav {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
-/*END FAVICON*/
+nav .dropdown {
+  @apply relative mt-2 inline-block content-center items-center self-center rounded;
+}
+nav .dropdown button {
+  @apply inline-flex items-center rounded bg-azul-light;
+}
+nav .dropdown button img {
+  @apply mouseaction rounded;
+}
+nav .dropdown-menu {
+  @apply absolute rounded-t rounded-b;
+}
+
+/*END NAVBAR*/
 
 /*Section Home*/
 
