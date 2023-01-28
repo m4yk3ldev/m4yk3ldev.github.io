@@ -1,6 +1,11 @@
 {
+  "coc.preferences.formatOnSave": true,
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
   "cSpell.words": [
+    "FAVICON",
     "gmail",
-    "linkedin"
+    "linkedin",
+    "mouseaction"
   ]
 }

@@ -1,14 +1,9 @@
-import {
-  GetServerSideProps,
-  GetStaticPaths,
-  GetStaticProps,
-  NextPage,
-} from "next";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Home from "../components/Home/Home";
 import MainLayout from "../components/Layout/MainLayout";
 import { useRouter } from "next/navigation";
-import { locales, defaultLang } from "../lib/config";
 import { useEffect } from "react";
+import { defaultLang } from "../lib/config";
 
 interface Props {
   locale: string;
@@ -39,7 +34,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const locale = context.params?.locale ?? "es";
+  const locale = context.params?.locale ?? defaultLang;
 
   return {
     props: { locale },

@@ -21,23 +21,15 @@ const Hero: FC = () => {
     setT(GetLocaleStorage(locale).Hero);
   }, [locale]);
   return (
-    <div
-      className="mx-auto flex h-screen min-h-screen flex-col content-center items-center"
-      id="Home"
-    >
-      <div className="my-auto flex flex-col">
-        <h1 className="m-0 text-2xl font-bold text-blanco-light md:text-4xl lg:text-6xl">
-          {t.title}
-        </h1>
-        <p className="my-2.5 self-end text-center text-lg text-blanco-light">
-          {t.description}
-        </p>
-        <p className="flex flex-row items-center justify-center gap-1 self-end text-center text-lg text-blanco-light">
+    <section id="Home" className="home">
+      <div>
+        <h1>{t.title}</h1>
+        <p className="description">{t.description}</p>
+        <p className="social">
           <Link
             href="https://github.com/m4yk3ldev"
             target="_blank"
             rel="noopener"
-            className="mouseaction text-center text-lg font-bold"
           >
             <Image src={github} alt="Github" width={30} height={30} />
           </Link>
@@ -45,7 +37,6 @@ const Hero: FC = () => {
             href="https://www.linkedin.com/in/maykel-arias-torres-b827a6136/"
             target="_blank"
             rel="noopener"
-            className="mouseaction text-center text-lg font-bold"
           >
             <Image src={linkedin} alt="Github" width={30} height={30} />
           </Link>
@@ -53,7 +44,6 @@ const Hero: FC = () => {
             href="https://twitter.com/Maykel920915"
             target="_blank"
             rel="noopener"
-            className="mouseaction text-center text-lg font-bold"
           >
             <Image src={twitter} alt="Twitter" width={30} height={30} />
           </Link>
@@ -62,13 +52,12 @@ const Hero: FC = () => {
             href="mailto:hanibal920915@gmail.com"
             target="_blank"
             rel="noreferrer"
-            className="mouseaction text-center text-lg font-bold"
           >
             <Image src={gmail} alt="Gmail Email" width={30} height={30} />
           </Link>
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

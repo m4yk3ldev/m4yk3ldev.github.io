@@ -9,5 +9,15 @@
   "Hero": {
     "title": "Hello, i am Maykel Arias Torres",
     "description": "Front-end developer"
+  },
+  "About": {
+    "title": "About Me",
+    "description": [
+      "Solid front-end knowledge of React, ES6+, HTML5, CSS3, Redux, Typescript, and Jest.",
+      "Strong understanding of UI/UX design principles, advanced CSS (CSS Modules, Emotion, Sass, Styled Components), and responsive design.",
+      "Backend experience using APIs Node.js/Express, Python/Django, Auth, Security, and RESTful.",
+      "Administration of relational and non-relational databases using MongoDB, PostgreSQL, and MySQL.",
+      "Positive attitude, strong work ethic, focus on results while focusing on high code quality and performance."
+    ]
   }
 }

@@ -29,6 +29,7 @@ body {
   @apply transition delay-150 duration-150 ease-in-out hover:scale-110;
 }
 
+/*FAVICON*/
 .menu li {
   @apply cursor-pointer whitespace-nowrap px-2 py-1 hover:rounded hover:bg-azul-light;
 }
@@ -43,3 +44,46 @@ body {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+/*END FAVICON*/
+
+/*Section Home*/
+
+section.home {
+  @apply mx-auto flex h-screen min-h-screen flex-col content-center items-center;
+}
+
+section.home div {
+  @apply my-auto flex flex-col items-center;
+}
+section.home div h1 {
+  @apply m-0 text-2xl font-bold text-blanco-light md:text-4xl lg:text-6xl;
+}
+section.home div p.description {
+  @apply my-2.5 self-end text-center text-lg text-blanco-light;
+}
+section.home div p.social {
+  @apply flex flex-row items-center justify-center gap-1 self-end text-center text-lg text-blanco-light;
+}
+section.home div p.social a {
+  @apply mouseaction text-center text-lg font-bold;
+}
+
+/*END SECTION HOME*/
+
+/*SECTION ABOUT*/
+
+section.about {
+  @apply mx-auto flex flex-col items-center;
+}
+
+section.about h2 {
+  @apply text-2xl font-bold text-blanco-light md:text-4xl lg:text-6xl;
+}
+section.about div {
+  @apply container mx-auto;
+}
+
+section.about div p {
+  @apply my-1 self-start text-base text-blanco-light md:text-lg xl:text-lg;
+}
+/*END SECTION ABOUT*/

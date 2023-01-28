@@ -20,16 +20,16 @@ export const MenuDesktop: FC = () => {
         <div className="navigation flex">
           <div className="menuToggle"></div>
           <ul className="flex flex-row gap-2">
-            {/* <li className="active mouseaction flex flex-1">
+            <li className="active mouseaction flex flex-1">
               <Link href="#Home">
                 <span className="text">{t.home}</span>
               </Link>
-            </li> */}
-            {/* <li className="mouseaction flex flex-1">
+            </li>
+            <li className="mouseaction flex flex-1">
               <Link href="#About">
                 <span className="text">{t.about}</span>
               </Link>
-            </li> */}
+            </li>
           </ul>
         </div>
       </div>

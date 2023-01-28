@@ -11,6 +11,11 @@ interface IDataLocaleStorage {
     title: string;
     description: string;
   };
+  About: {
+    title: string;
+    description: string[];
+
+  };
 }
 interface IGetLocaleStorage {
   [locale: string]: IDataLocaleStorage;
