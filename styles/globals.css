@@ -74,6 +74,7 @@ section.home div p.social a {
 
 section.about {
   @apply mx-auto flex flex-col items-center;
+  height: 50vh;
 }
 
 section.about h2 {
