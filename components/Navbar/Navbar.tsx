@@ -17,7 +17,7 @@ export const Navbar: FC = () => {
   }, [router]);
   return (
     <>
-      <nav className="main sticky top-3.5 flex max-h-full flex-row flex-nowrap content-center items-center justify-between">
+      <nav>
         <FavIcon />
         <div className="flex flex-row content-center items-center justify-center gap-2">
           <MenuDesktop />

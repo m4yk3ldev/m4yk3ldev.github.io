@@ -21,9 +21,14 @@ body {
   }
 }
 
-.main {
+/*NAVBAR*/
+nav {
+  @apply sticky top-3.5 flex max-h-full flex-row flex-nowrap content-center items-center justify-between;
+  backdrop-filter: blur(2px);
   height: 50px;
 }
+
+/*END NAVBAR*/
 
 .mouseaction {
   @apply transition delay-150 duration-150 ease-in-out hover:scale-110;
