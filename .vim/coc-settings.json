@@ -4,8 +4,11 @@
   "scss.lint.unknownAtRules": "ignore",
   "cSpell.words": [
     "FAVICON",
+    "Maykel",
     "gmail",
+    "gtag",
     "linkedin",
-    "mouseaction"
+    "mouseaction",
+    "usescroll"
   ]
 }

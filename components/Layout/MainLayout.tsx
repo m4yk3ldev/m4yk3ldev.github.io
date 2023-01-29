@@ -13,7 +13,6 @@ const MainLayout: FC<Props> = ({ titleText = "Bienvenido", children }) => {
         <link rel="icon" type="image/x-icon" href={favicon.src} />
         <link rel="shortcut icon" type="image/jpg" href={favicon.src} />
         <link rel="apple-touch-icon" href={favicon.src} />
-        <meta name="theme-color" content="#317EFB" />
         <meta name="title" content={titleText + " | Maykel Tech"} />
         <meta
           name="description"
