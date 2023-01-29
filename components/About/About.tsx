@@ -14,7 +14,16 @@ const About: FC = () => {
     setT(GetLocaleStorage(locale).About);
   }, [locale]);
   return (
-    <section id="About" className="about">
+    <section
+      id="About"
+      className="about"
+      onFocus={() => {
+        console.log("Viendo About");
+      }}
+      onScroll={() => {
+        console.log("On Scroll");
+      }}
+    >
       <div>
         <h2>{t.title}</h2>
         <div>

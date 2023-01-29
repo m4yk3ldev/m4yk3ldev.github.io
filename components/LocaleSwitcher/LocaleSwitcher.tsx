@@ -42,7 +42,6 @@ export const LocaleSwitcher: FC = () => {
       (localStorage.getItem("locale") as TypeLocale) ?? defaultLang
     );
   }, []);
-  console.log({ router });
 
   return (
     <div className="dropdown">
