@@ -59,9 +59,11 @@ export const MenuDesktop: FC = () => {
     const About = document.getElementById("About");
     if (Home) {
       setHome({ ...home, top: Home.offsetTop, bottom: Home.offsetWidth });
+      console.log({ Home });
     }
     if (About) {
       setAbout({ ...about, top: About.offsetTop, bottom: About.offsetWidth });
+      console.log({ About });
     }
   }, []);
   return (

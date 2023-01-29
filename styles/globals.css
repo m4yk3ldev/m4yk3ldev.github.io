@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --primary: #06283d;
+  --secondary: #245565;
+}
 html,
 body {
   font-family: -apple-system, Montserrat, sans-serif;
@@ -20,6 +24,28 @@ body {
     background-position: 24% 0;
   }
 }
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
+}
 .mouseaction {
   @apply transition delay-150 duration-150 ease-in-out hover:scale-110;
 }
@@ -31,7 +57,7 @@ body {
 /*NAVBAR*/
 nav {
   @apply sticky top-3.5 flex max-h-full flex-row flex-nowrap content-center items-center justify-between;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(10px);
   height: 50px;
 }
 nav .favicon {
@@ -78,7 +104,7 @@ nav ul.dropdown-menu li img {
 
 /*Section Home*/
 section {
-  transition: all 0.4s;
+  transition: all 0.5s ease-in-out;
 }
 
 section.home {
