@@ -55,6 +55,15 @@ body {
   overflow: hidden;
 }
 
+/*Tooltip*/
+.tooltip {
+  @apply relative;
+}
+.tooltip .text {
+  @apply text-center text-sm text-blanco-light;
+}
+/*END Tooltip*/
+
 /*NAVBAR*/
 nav {
   @apply sticky top-3.5 flex max-h-full flex-row flex-nowrap content-center items-center justify-between;
@@ -109,8 +118,7 @@ section {
 }
 
 section.home {
-  @apply mx-auto flex flex-col content-center items-center;
-  height: 100vh;
+  @apply mx-auto flex h-screen min-h-screen flex-col content-center items-center;
 }
 
 section.home div {
@@ -125,8 +133,8 @@ section.home div p.description {
 section.home div p.social {
   @apply flex flex-row items-center justify-center gap-1 self-end text-center text-lg text-blanco-light;
 }
-section.home div p.social a {
-  @apply mouseaction text-center text-lg font-bold;
+section.home div p.social span {
+  @apply mouseaction;
 }
 
 /*END SECTION HOME*/
