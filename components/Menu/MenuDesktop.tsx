@@ -53,6 +53,7 @@ export const MenuDesktop: FC = () => {
     } else {
       handleClickHome();
     }
+    console.log({ position });
   }, [position]);
   useEffect(() => {
     const Home = document.getElementById("Home");

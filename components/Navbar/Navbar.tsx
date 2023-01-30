@@ -20,7 +20,6 @@ export const Navbar: FC = () => {
       <nav>
         <FavIcon />
         <div className="sectionMenu">
-          <MenuDesktop />
           <Link
             href={`${getCanonicalUrl}/cv/${locale}.pdf`}
             target="_blank"

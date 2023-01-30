@@ -9,7 +9,7 @@ html,
 body {
   font-family: -apple-system, Montserrat, sans-serif;
   @apply text-blanco-light;
-  background: linear-gradient(180deg, #06283d, #245565);
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
   background-size: 400% 400%;
   animation: backgroundAnimate 7s ease infinite;
 }
@@ -25,13 +25,13 @@ body {
   }
 }
 
-/* Firefox */
+/*ScrollBar*/
+
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--secondary) var(--primary);
 }
 
-/* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 15px;
 }
@@ -46,6 +46,7 @@ body {
   border-radius: 14px;
   border: 3px solid var(--primary);
 }
+/*END ScrollBar*/
 .mouseaction {
   @apply transition delay-150 duration-150 ease-in-out hover:scale-110;
 }
@@ -57,7 +58,7 @@ body {
 /*NAVBAR*/
 nav {
   @apply sticky top-3.5 flex max-h-full flex-row flex-nowrap content-center items-center justify-between;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(2px);
   height: 50px;
 }
 nav .favicon {
@@ -108,7 +109,8 @@ section {
 }
 
 section.home {
-  @apply mx-auto flex h-screen min-h-screen flex-col content-center items-center;
+  @apply mx-auto flex flex-col content-center items-center;
+  height: 100vh;
 }
 
 section.home div {
@@ -128,24 +130,3 @@ section.home div p.social a {
 }
 
 /*END SECTION HOME*/
-
-/*SECTION ABOUT*/
-
-section.about {
-  @apply mx-auto flex h-screen min-h-screen flex-col content-center items-center;
-}
-section.about div {
-  @apply my-auto flex flex-col items-center;
-}
-
-section.about div h2 {
-  @apply text-2xl font-bold text-blanco-light md:text-4xl lg:text-6xl;
-}
-section.about div div.description {
-  @apply container mx-auto;
-}
-
-section.about div p {
-  @apply my-1 self-start text-base text-blanco-light md:text-lg xl:text-lg;
-}
-/*END SECTION ABOUT*/
