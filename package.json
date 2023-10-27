@@ -6,29 +6,27 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-    "build": "next build",
+    "build": "next build && next export",
     "deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
-    "@next/font": "14.0.0",
-    "@types/node": "20.8.9",
+    "@next/font": "13.5.6",
+    "@types/node": "18.15.11",
     "@types/react": "18.2.33",
     "@types/react-dom": "18.2.14",
-    "@typescript-eslint/eslint-plugin": "^6.9.0",
-    "@typescript-eslint/parser": "^6.9.0",
-    "eslint": "8.52.0",
-    "eslint-config-next": "14.0.0",
-    "next": "14.0.0",
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "next": "13.5.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.2.2"
+    "typescript": "5.0.4"
   },
   "devDependencies": {
     "@types/styled-components": "5.1.29",
-    "autoprefixer": "10.4.16",
-    "npm-check-updates": "16.14.6",
+    "autoprefixer": "10.4.14",
     "postcss": "8.4.31",
-    "prettier-plugin-tailwindcss": "0.5.6",
+    "prettier": "2.8.7",
+    "prettier-plugin-tailwindcss": "0.2.7",
     "tailwindcss": "3.3.5"
   }
 }
