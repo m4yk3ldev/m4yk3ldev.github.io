@@ -1,18 +1,16 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Home from "../components/Home/Home";
 import MainLayout from "../components/Layout/MainLayout";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useMemo } from "react";
 import { defaultLang } from "../lib/config";
 
 interface Props {
   locale: string;
 }
 const HomePage: NextPage<Props> = ({ locale }) => {
-  const router = useRouter();
-  useEffect(() => {
+  useMemo(() => {
     localStorage.setItem("locale", locale);
-  }, [locale, router]);
+  }, [locale]);
   return (
     <>
       <MainLayout titleText="Bienvenido">
