@@ -43,24 +43,11 @@ const MainLayout: FC<Props> = ({ titleText = "Bienvenido", children }) => {
           content="Soy un desarrollador web con experiencia en HTML, CSS, JavaScript, NodeJS y Python."
         />
         <meta property="twitter:image" content={favicon.src} />
+        <meta name="google-adsense-account" content="ca-pub-7217165524683704" />
         <title>{titleText} | Maykel Tech</title>
       </Head>
-      <Script
-        strategy={"afterInteractive"}
-        src={`https://www.googletagmanager.com/gtag/js?id=G-9DN35DFS38`}
-      />
-      <Script
-        id={"gtag-id"}
-        strategy={"afterInteractive"}
-        dangerouslySetInnerHTML={{
-          __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-9DN35DFS38');
-        `,
-        }}
-      />
+      <Script   strategy={"afterInteractive"} async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7217165524683704" />
+     
       {children}
     </>
   );
