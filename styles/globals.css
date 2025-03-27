@@ -4,11 +4,13 @@
 :root {
   --primary: #06283d;
   --secondary: #245565;
+  --blanco-light: #DFF6FF;
+  --azul-light: #256D85;
 }
 html,
 body {
   font-family: -apple-system, Montserrat, sans-serif;
-  @apply text-blanco-light;
+  @apply text-[#DFF6FF];
   background: linear-gradient(180deg, var(--primary), var(--secondary));
   background-size: 400% 400%;
   animation: backgroundAnimate 7s ease infinite;
@@ -60,7 +62,7 @@ body {
   @apply relative;
 }
 .tooltip .text {
-  @apply text-center text-sm text-blanco-light;
+  @apply text-center text-sm text-[#DFF6FF];
 }
 /*END Tooltip*/
 
@@ -81,11 +83,11 @@ nav .sectionMenu {
 }
 
 .menu li.active {
-  @apply rounded bg-azul-light text-blanco-light underline;
+  @apply rounded bg-azul-light text-[#DFF6FF] underline;
 }
 
 .langMenu ul .selectLang {
-  @apply absolute top-10 flex flex-col overflow-hidden bg-transparent text-blanco-light;
+  @apply absolute top-10 flex flex-col overflow-hidden bg-transparent text-[#DFF6FF];
 }
 nav .dropdown {
   @apply relative mt-2 inline-block content-center items-center self-center rounded;
@@ -125,13 +127,13 @@ section.home div {
   @apply my-auto flex flex-col items-center;
 }
 section.home div h1 {
-  @apply m-0 text-2xl font-bold text-blanco-light md:text-4xl lg:text-6xl;
+  @apply m-0 text-2xl font-bold text-[#DFF6FF] md:text-4xl lg:text-6xl;
 }
 section.home div p.description {
-  @apply my-2.5 self-end text-center text-lg text-blanco-light;
+  @apply my-2.5 self-end text-center text-lg text-[#DFF6FF];
 }
 section.home div p.social {
-  @apply flex flex-row items-center justify-center gap-1 self-end text-center text-lg text-blanco-light;
+  @apply flex flex-row items-center justify-center gap-1 self-end text-center text-lg text-[#DFF6FF];
 }
 section.home div p.social span {
   @apply mouseaction;
