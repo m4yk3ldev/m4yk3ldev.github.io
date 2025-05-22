@@ -6,8 +6,7 @@
     "dev": "next dev",
     "start": "PORT=3001 next start",
     "lint": "next lint",
-    "build": "next build",
-    "deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
+    "build": "next build"
   },
   "dependencies": {
     "@next/font": "14.2.15",
